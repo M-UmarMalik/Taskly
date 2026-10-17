@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+:root {
+  color-scheme: light;
+
+  --page-bg: #e5e6f1;
+  --bg-glow: #f4f4fb;
+
+  --card-glass: rgba(255, 255, 255, 0.66);
+  --card-solid: #ffffff;
+
+  --chip-bg: #ffffff;
+  --input-bg: #ffffff;
+
+  --border-color: rgba(40, 42, 80, 0.09);
+
+  --text-color: #22232b;
+  --muted-text: #777a8c;
+
+  --accent-color: #6a86f2;
+  --accent-soft: #dee4fd;
+  --accent-text: #4a63d3;
+
+  --button-bg: #3a3b42;
+  --button-text: #ffffff;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --page-bg: #14151b;
+  --bg-glow: #1d1f2b;
+
+  --card-glass: rgba(255, 255, 255, 0.055);
+  --card-solid: #1e2029;
+
+  --chip-bg: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(255, 255, 255, 0.08);
+
+  --border-color: rgba(255, 255, 255, 0.09);
+
+  --text-color: #eceef7;
+  --muted-text: #9a9db1;
+
+  --accent-color: #8aa0ff;
+  --accent-soft: #273055;
+  --accent-text: #aebcff;
+
+  --button-bg: #eceef7;
+  --button-text: #14151b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  transition:
+    background-color 0.01s ease,
+    color 0.01s ease;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
