@@ -8,7 +8,7 @@ import WeeklyProgress from "../components/Graph.jsx";
 import logo1 from "../assets/logo1.png";
 import hill from "../assets/Group 1.png";
 
-const API_URL = import.meta.env.API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 const Home = ({ isDark, toggleTheme }) => {
   const navigate = useNavigate();

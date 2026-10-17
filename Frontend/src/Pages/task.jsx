@@ -5,7 +5,7 @@ import DashLayout from "../components/DashLayout";
 import NewTask from "../components/Task.jsx";
 import EditTask from "../components/EditTask.jsx";
 
-const API_URL = import.meta.env.API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 // Updated to match your Mongoose schema exact enum values: ['In progress', 'Completed', 'ToDo']
 const STATUS = { TODO: "ToDo", PROGRESS: "In progress", DONE: "Completed" };
 

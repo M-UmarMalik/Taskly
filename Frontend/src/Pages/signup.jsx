@@ -80,7 +80,7 @@ const Signup = ({ isDark, toggleTheme }) => {
       setLoading(true);
       setServerError("");
 
-      const response = await axios.post( import.meta.env.SAPI_URL, {
+      const response = await axios.post( import.meta.env.VITE_SAPI_URL, {
         name: formData.name,
         username: formData.username,
         email: formData.email,
@@ -162,7 +162,7 @@ const Signup = ({ isDark, toggleTheme }) => {
               type="text"
               placeholder="Ali Khan"
               value={formData.name}
-              onchange={handleChange}
+              onChange={handleChange}
               error={errors.name}
               icon={UserRound}
               autocomplete="name"
@@ -175,7 +175,7 @@ const Signup = ({ isDark, toggleTheme }) => {
               type="text"
               placeholder="alikhan"
               value={formData.username}
-              onchange={handleChange}
+              onChange={handleChange}
               error={errors.username}
               icon={AtSign}
               autocomplete="username"
@@ -188,7 +188,7 @@ const Signup = ({ isDark, toggleTheme }) => {
               type="email"
               placeholder="alikhan@example.com"
               value={formData.email}
-              onchange={handleChange}
+              onChange={handleChange}
               error={errors.email}
               icon={Mail}
               autocomplete="email"
@@ -201,7 +201,7 @@ const Signup = ({ isDark, toggleTheme }) => {
               type="password"
               placeholder="Enter your password"
               value={formData.password}
-              onchange={handleChange}
+              onChange={handleChange}
               error={errors.password}
               icon={LockKeyhole}
               autocomplete="new-password"

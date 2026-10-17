@@ -57,7 +57,7 @@ const Login = ({ isDark, toggleTheme }) => {
       setLoading(true);
       setServerError("");
 
-      const response = await axios.post( import.meta.env.LAPI_URL, {
+      const response = await axios.post( import.meta.env.VITE_LAPI_URL, {
         email: formData.email,
         password: formData.password
       });

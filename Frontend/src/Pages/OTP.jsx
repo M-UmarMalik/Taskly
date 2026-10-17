@@ -32,7 +32,7 @@ const OTP = ({ isDark, toggleTheme }) => {
       setServerError("");
       setServerSuccess("");
 
-      const response = await axios.post( import.meta.env.OAPI_URL , {
+      const response = await axios.post( import.meta.env.VITE_OAPI_URL , {
         otp: otp,
       });
 
