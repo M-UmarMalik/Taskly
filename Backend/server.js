@@ -11,20 +11,20 @@ const PORT = process.env.PORT || 5000;
 const corsOptions = {
   origin: [
     'http://localhost:5173',
-    'hhttps://taskly-probzzz.vercel.app',
+    'https://taskly-probzzz.vercel.app',
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
-// Middleware
 app.use(cors(corsOptions));
 app.use(express.json());
 
 // Routes
 app.use('/api', authRoute);
 app.use('/api/tasks', taskRoutes);
+
 
 // Test route
 app.get('/', (req, res) => {
