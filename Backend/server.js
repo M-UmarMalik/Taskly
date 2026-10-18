@@ -19,22 +19,12 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // preflight
+app.use(express.json());
 
 app.use(express.json());
 
-// Har request se pehle DB connect ho (serverless ke liye zaroori)
-app.use(async (req, res, next) => {
-  try {
-    await connectDB();
-    next();
-  } catch (err) {
-    console.error('DB connection failed:', err);
-    res.status(500).json({ message: 'Database connection failed' });
-  }
-});
+connectDB();
 
-// Routes
 app.use('/api', authRoute);
 app.use('/api/tasks', taskRoutes);
 
